@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Wrapper } from './styles';
-
 interface props {
   user: {
     node_id: string;
@@ -11,10 +9,10 @@ interface props {
 
 const UserListItem: React.FC<props> = ({ user }) => {
   return (
-    <Wrapper>
-      <strong>{user.login}</strong>
-      <span>{user.node_id}</span>
-    </Wrapper>
+    <tr>
+      <td>{user.login}</td>
+      <td>{user.node_id}</td>
+    </tr>
   );
 };
 

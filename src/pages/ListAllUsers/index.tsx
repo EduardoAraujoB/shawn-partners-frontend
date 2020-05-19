@@ -5,7 +5,15 @@ import paginator from '../../util/paginator';
 
 import api from '../../services/api';
 
-import { Wrapper } from './styles';
+import {
+  Wrapper,
+  UsersContainer,
+  ActionsWrapper,
+  AddButton,
+  AddIcon,
+  RemoveButton,
+  RemoveIcon,
+} from './styles';
 
 const ListAllUsers: React.FC = () => {
   const [allUsers, setAllUsers] = useState([]);
@@ -40,17 +48,22 @@ const ListAllUsers: React.FC = () => {
       setPage(page + 1);
     }
   }
-
   return (
     <Wrapper>
       {loading ? (
         <span>Loading</span>
       ) : (
-        <div>
+        <UsersContainer>
           <UsersList users={users} />
-          <button onClick={handlePreviousPage}>Previous Page</button>
-          <button onClick={handleNextPage}>Next Page</button>
-        </div>
+          <ActionsWrapper>
+            <RemoveButton onClick={handlePreviousPage}>
+              <RemoveIcon />
+            </RemoveButton>
+            <AddButton onClick={handleNextPage}>
+              <AddIcon />
+            </AddButton>
+          </ActionsWrapper>
+        </UsersContainer>
       )}
     </Wrapper>
   );

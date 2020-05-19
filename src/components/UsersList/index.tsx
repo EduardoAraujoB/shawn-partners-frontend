@@ -15,9 +15,19 @@ interface props {
 const UsersList: React.FC<props> = ({ users }) => {
   return (
     <Wrapper>
-      {users.map((user) => (
-        <UserListItem user={user} key={user.node_id} />
-      ))}
+      <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>id</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user) => (
+            <UserListItem user={user} key={user.node_id} />
+          ))}
+        </tbody>
+      </table>
     </Wrapper>
   );
 };
