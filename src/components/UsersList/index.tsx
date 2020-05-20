@@ -20,6 +20,7 @@ const UsersList: React.FC<props> = ({ users }) => {
           <tr>
             <th>name</th>
             <th>id</th>
+            <th>profile</th>
           </tr>
         </thead>
         <tbody>
