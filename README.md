@@ -1,44 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
 
-## Available Scripts
+The front part of the fullstack challenge by shawn and partners, this repo was deployed into heroku https://shawn-partners-frontend.herokuapp.com/
 
-In the project directory, you can run:
+## Sumary
 
-### `yarn start`
+- [ How to setup ](#how-to-setup)
+- [ Scripts ](#scripts)
+- [ Code Linters ](#code-linters)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to Setup
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+After download the project run this command to install the project dependencies
 
-### `yarn test`
+```
+yarn
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+after that, run this command to start the aplicattion
 
-### `yarn build`
+```
+yarn start
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Now you can open your browser on http://localhost:3000 and the aplicattion will be running.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Scripts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+There is three types of scritpts on the project
 
-### `yarn eject`
+- `start`: Run the aplicattion on development mode, so you can edit files on the aplicattion and the server will re-start automatically. **note**: This script isn't recommend for **production**
+- `build`: Generate a production build of the aplicattion, this command just build the aplicattion, to run it will need the **node**, see more here [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `eject`: If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project. **note**: That's a one way operation, be careful about that
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Code Linters
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project use two different code linters and a another
+extension to the IDE, that is...
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Eslint
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Or EcmaScriptLint, is the linter responsible to check problems in the syntax and return errors, your configurations are shared and used by others linters
 
-## Learn More
+### Prettier
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This linter is used only for check the **code style**, they don't will check the syntax, just find a way to do the code more **legible** and have a integration with **eslint**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Editor Config
+
+That isn't a linter, just a extension to share some configs between other editors, like the format of the end of lines, identation with spaces or tabs, etc...
